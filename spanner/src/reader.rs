@@ -293,7 +293,7 @@ impl<'a, T> RowIterator<'a, T>
 where
     T: Reader,
 {
-    pub(crate) async fn new(
+    pub async fn new(
         session: &'a mut SessionHandle,
         reader: T,
         option: Option<CallOptions>,

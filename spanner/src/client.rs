@@ -675,7 +675,7 @@ impl Client {
             .map_err(|e| (E::from(e.status), Some(e.session)))
     }
 
-    async fn get_session(&self) -> Result<ManagedSession, SessionError> {
+    pub async fn get_session(&self) -> Result<ManagedSession, SessionError> {
         self.sessions.get().await
     }
 
